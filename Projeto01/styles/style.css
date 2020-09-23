@@ -1,0 +1,114 @@
+@font-face{
+    font-family: "Bebas";
+    src: url("../fonts/BebasNeue-Regular.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas";
+}
+body{
+    height: 100%;
+    background-color: #878E76;
+}
+/*Classes auxiliares*/
+.center{
+    max-width: 1300px;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+.w50{
+    width: 50%;
+}
+.w33{
+    width: 33.3%;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(157, 180, 171, 0.7);
+    z-index: -1;
+}
+/*Header*/
+header{
+    padding: 20px 0;
+    background: #BBDB9B;
+}
+.mobile{
+    display: none;
+}
+nav.desktop ul{
+    list-style-type: none;
+    padding-top: 5px;
+}
+nav.desktop ul li{
+    padding: 0 15px;
+    display: inline-block;
+}
+nav.desktop a{
+    color: white;
+    font-size: 20px;
+    text-decoration:none;
+}
+header .logomarca{
+    font-size: 30px;
+    color: white;
+}
+/*Banner-principal*/
+section#banner-principal{
+    height: 600px;
+    background-image: url(../img/codigo.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+}
+section#banner-principal form{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 500px;
+    text-align: center;
+}
+section#banner-principal form h2{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 30px;
+
+}
+section#banner-principal form input[type="email"]{
+    width: 100%;
+    font-size: 22px;
+    outline: none;
+    margin: 10px 0;
+    background-color: white;
+    height: 50px;
+    border-radius: 10px;
+    padding-left: 10px;
+}   
+section#banner-principal form input[type="submit"]{
+    width: 70%;
+    font-size: 30px;
+    outline: none;
+    margin: 10px 0;
+    background-color: #ABC4A1;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+} 
