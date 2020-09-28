@@ -48,6 +48,7 @@
                 <h2>Marcos G. Bauab</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores modi recusandae fugiat error ipsam qui inventore similique consectetur, omnis quo nostrum labore quos minus, vel consequuntur odio rerum sint nihil!</p>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, in earum. Necessitatibus saepe, aliquam voluptates ut rerum dignissimos aliquid doloremque culpa quos debitis nemo sit aspernatur eum, obcaecati error. Quae.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quo repellendus dicta magnam dignissimos doloremque dolorum. Quod asperiores quisquam consequatur quas nostrum natus id laboriosam doloribus quo, facilis architecto odio?</p>
             </div>
             <div class="w50 left">
                 <img class="right" src="img/FotoFuvest.png" alt="">
@@ -73,6 +74,7 @@
                 <h3>Javascript</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit aperiam incidunt id ullam laudantium et accusamus est harum in. Architecto neque quas, dicta nostrum accusamus ipsum quidem earum fuga aut.</p>
             </div>
+            <div class="clear"></div>
         </div>
     </section>
     <section class="extras">
