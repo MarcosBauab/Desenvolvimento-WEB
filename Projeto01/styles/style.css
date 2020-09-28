@@ -7,18 +7,26 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Bebas";
+
+    --cor-background-:  #878E76;
+    --azul-daora: rgb(157, 180, 171);
 }
 body{
     height: 100%;
-    background-color: #878E76;
+    background-color: var(--cor-background-);
 }
 /*Classes auxiliares*/
+img{
+    width: 100%;
+    max-width: 400px;
+}
 .center{
     max-width: 1300px;
     padding: 0 2%;
     margin: 0 auto;
 }
 .w50{
+    padding-right: 0 2%;
     width: 50%;
 }
 .w33{
@@ -77,7 +85,7 @@ section#banner-principal{
     z-index: 0;
 }
 section#banner-principal form{
-    width: 100%;
+    width: 93%;
     z-index: 2;
     position: absolute;
     left: 50%;
@@ -112,3 +120,71 @@ section#banner-principal form input[type="submit"]{
     border: 0;
     cursor: pointer;
 } 
+
+/*Autor*/
+section#autor{
+    padding: 30px 0;
+}
+section#autor h2{
+    font-size: 20pt;
+    font-weight: normal;
+}
+section#autor p{
+    font-size: 13pt;
+    margin-top: 10px;
+}
+section#autor img{
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 768px){
+    img{
+        float: none !important;
+        margin: 0 auto;
+        display: block;
+    }
+    .w50{
+        width: 100%;
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 450px){
+    nav.desktop{
+        display: none;
+    }
+    nav.mobile{
+        display: block;
+    }
+    nav.mobile ul{
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+        text-align: center;
+        background-color: var(--cor-background-);
+        animation: animar 1s;
+    }
+    nav.mobile a{
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 10px 0;
+    }
+
+    .botao-menu{
+        font-size: 20pt;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+@keyframes animar{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}

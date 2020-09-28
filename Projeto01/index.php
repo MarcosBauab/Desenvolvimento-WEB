@@ -21,6 +21,7 @@
                 </ul>
             </nav>
             <nav class="mobile right">
+                <div class="botao-menu"><i class="fas fa-chevron-circle-down"></i></div>
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">Sobre</a></li>
@@ -49,7 +50,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, in earum. Necessitatibus saepe, aliquam voluptates ut rerum dignissimos aliquid doloremque culpa quos debitis nemo sit aspernatur eum, obcaecati error. Quae.</p>
             </div>
             <div class="w50 left">
-                <img src="img/FotoFuvest.png" alt="">
+                <img class="right" src="img/FotoFuvest.png" alt="">
             </div>
             <div class="clear"></div>
         </div>
@@ -109,6 +110,7 @@
         <p>&copy; Marcão dos Sites</p>
         </div>
     </footer>
+    <script src="js/index.js"></script>
     <script src="js/all.min.js"></script>
 </body>
 </html>
