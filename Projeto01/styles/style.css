@@ -8,12 +8,12 @@
     box-sizing: border-box;
     font-family: "Bebas";
 
-    --cor-background-:  #878E76;
-    --azul-daora: rgb(157, 180, 171);
+    --cor-background:  #878E76;
+    --azul-daora: rgba(157, 180, 171, 0.7);
 }
 body{
     height: 100%;
-    background-color: var(--cor-background-);
+    background-color: white;
 }
 /*Classes auxiliares*/
 img{
@@ -21,7 +21,7 @@ img{
     max-width: 300px;
 }
 .center{
-    max-width: 1300px;
+    max-width: 1280px;
     padding: 0 2%;
     margin: 0 auto;
 }
@@ -71,6 +71,10 @@ nav.desktop a{
     color: white;
     font-size: 20px;
     text-decoration:none;
+    height: 100%;
+}
+nav.desktop a:hover{
+    text-decoration: underline !important;
 }
 header .logomarca{
     font-size: 30px;
@@ -139,7 +143,7 @@ section#autor img{
 }
 /*Section especialidades*/
 section.especialidades{
-    background-color: #442F51;
+    background-color: #BBDB9B;
     color: white;
     padding: 40px 0;
 }
@@ -168,6 +172,77 @@ div.box-especialidade h3:nth-of-type(2){
     padding: 0 20px;
     text-align: center;
 }
+/*Section extras*/
+section.extras{
+    padding: 30px 0;
+    background-color: var(--azul-daora);
+}
+section.extras div:nth-child(1), .servicos-container{
+    padding: 0 30px;
+}
+
+section.extras h2.title{
+    font-weight: normal;
+    font-size: 25px;
+
+}
+div.depoimento{
+    padding: 15px 0;
+    border-bottom: 1px solid black;
+}
+p.depoimento{
+    font-weight: 300;
+    font-size: 15px;
+}
+p.autor{
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.servicos ul{
+    margin: 20px 0;
+}
+.servicos li{
+    margin-bottom: 15px;
+    font-weight: 300;
+    font-size: 15px;
+}
+/*Footer*/
+footer{
+    padding: 20px 0;
+}
+footer p{
+    text-align: center;
+    font-size: 15px;
+}
+footer.fixed{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/*Página de erro*/
+section.erro{
+    text-align: center;
+    
+}
+section.erro h2{
+    position: absolute;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -50px;
+    padding: 20px;
+}
+section.erro h2 svg{
+    margin-right: 10px;
+}
+/*Página de contato*/
+#map{
+    width: 100%;
+    height: 400px;
+}
+
 
 @media screen and (max-width: 768px){
     img{
@@ -177,14 +252,14 @@ div.box-especialidade h3:nth-of-type(2){
     }
     .w50{
         width: 100%;
-        padding: 20px;
+        padding: 20px !important;
     }
     .w33{
         width: 100%;
         
     }
 }
-@media screen and (max-width: 450px){
+@media screen and (max-width: 500px){
     nav.desktop{
         display: none;
     }
@@ -199,21 +274,28 @@ div.box-especialidade h3:nth-of-type(2){
         left: 0;
         z-index: 1;
         text-align: center;
-        background-color: var(--cor-background-);
+        background-color:white;
         animation: animar 1s;
     }
     nav.mobile a{
         display: block;
-        color: white;
+        color: black;
         text-decoration: none;
         padding: 10px 0;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid var(--azul-daora);
     }
 
     .botao-menu{
         font-size: 20pt;
         cursor: pointer;
         color: white;
+        
+    }
+    .giro{
+        animation-name: giro;
+       
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
     }
 }
 
@@ -223,5 +305,14 @@ div.box-especialidade h3:nth-of-type(2){
     }
     100%{
         opacity: 100%;
+    }
+}
+
+@keyframes giro{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
     }
 }

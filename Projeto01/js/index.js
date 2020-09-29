@@ -7,5 +7,5 @@ botaoMenu.addEventListener('click', function(){
     } else {
         botaoMenuUl.style.display = "block"
     }
-    
+    botaoMenu.classList.toggle("giro")
 })
