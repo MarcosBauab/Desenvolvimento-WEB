@@ -58,7 +58,7 @@
     <?php
         if($url == 'contato'){
     ?>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0VoDidqM-SXOHUCYWBnA1B-2YaVGs3go&callback=initMap"
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
     type="text/javascript"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/map.js"></script>
     <?php 
