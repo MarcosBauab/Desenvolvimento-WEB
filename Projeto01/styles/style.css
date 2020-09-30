@@ -210,6 +210,8 @@ p.autor{
 /*Footer*/
 footer{
     padding: 20px 0;
+    background-color: #BBDB9B;
+    margin-top: 10px;
 }
 footer p{
     text-align: center;

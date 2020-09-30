@@ -8,10 +8,33 @@
     <meta name="keywords" content="site,teste,exemplo">
     <link rel="shortcut icon" href="<?php echo INCLUDE_PATH; ?>img/codigo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>styles/style.css">
+    <?php
+        #Pega a url da página
+        $url = isset($_GET['url']) ? $_GET['url'] : 'home' ;
+        if($url == 'contato'){
+    ?>
+    <link rel="stylesheet" href="styles/contato.css">
+    <?php
+        }
+    ?>
     <title>Projeto 1</title>
 </head>
 <body>
-
+    
+    <?php
+        switch ($url) {
+            case 'sobre':
+                //Tag própria
+                echo '<target target="sobre">';
+                break;
+            
+            case 'servicos':
+                echo '<target target="servicos">';
+                break;
+        }
+    
+    ?>
+    
     <header>
         <div class="center">
             <div class="logomarca left">Logomarca</div>
@@ -36,15 +59,19 @@
         </div>
     </header>
     <?php
-        #Pega a url da página
+        
         #Se existir usa o método : senão usa o 'home'
-        $url = isset($_GET['url']) ? $_GET['url'] : 'home' ;
+        
 
         if(file_exists('pages/'.$url.'.php')){
             include('pages/'.$url.'.php');
         } else {
-            $paginaerro = true;
-            include('pages/404.php');
+            if($url != 'sobre' && $url != 'servicos'){
+                $paginaerro = true;
+                include('pages/404.php');
+            } else {
+                include('pages/home.php');
+            }
         }
 
     ?>
@@ -58,8 +85,8 @@
     <?php
         if($url == 'contato'){
     ?>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-    type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4&callback=initMap" type="text/javascript">
+    </script>
     <script src="<?php echo INCLUDE_PATH; ?>js/map.js"></script>
     <?php 
         } 
