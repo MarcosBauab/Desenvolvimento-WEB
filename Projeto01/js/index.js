@@ -9,3 +9,9 @@ botaoMenu.addEventListener('click', function(){
     }
     botaoMenu.classList.toggle("giro")
 })
+var target = document.querySelector("target")
+if(target != null){
+    //O elemento existe então:
+    var elemento = '#'+target.getAttribute('target')
+    
+}

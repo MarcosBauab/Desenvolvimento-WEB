@@ -25,11 +25,11 @@
         switch ($url) {
             case 'sobre':
                 //Tag própria
-                echo '<target target="sobre">';
+                echo '<target target="sobre" />';
                 break;
             
             case 'servicos':
-                echo '<target target="servicos">';
+                echo '<target target="servicos" />';
                 break;
         }
     
@@ -41,8 +41,8 @@
             <nav class="desktop right">
                 <ul>
                     <li><a href="<?php echo INCLUDE_PATH; ?>" >Home</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
+                    <li><a href="home#autor">Sobre</a></li>
+                    <li><a href="home#servicos">Serviços</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>
             </nav>
@@ -50,8 +50,8 @@
                 <div class="botao-menu"><i class="fas fa-chevron-circle-down"></i></div>
                 <ul>
                     <li><a href="<?php echo INCLUDE_PATH; ?>" >Home</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
-                    <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
+                    <li><a href="home#autor">Sobre</a></li>
+                    <li><a href="home#servicos">Serviços</a></li>
                     <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>
             </nav>
@@ -82,6 +82,7 @@
     </footer>
     <script src="<?php echo INCLUDE_PATH; ?>js/index.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/all.min.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
     <?php
         if($url == 'contato'){
     ?>

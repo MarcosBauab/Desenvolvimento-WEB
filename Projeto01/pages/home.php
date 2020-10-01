@@ -1,4 +1,7 @@
-<section id="banner-principal">
+    <section id="banner-principal">
+        <div style="background-image: url(<?php echo INCLUDE_PATH; ?>img/codigo.jpg);" class="banner-single"></div>
+        <div style="background-image: url(<?php echo INCLUDE_PATH; ?>img/codigo2.jpg);" class="banner-single sumido"></div>
+        <div style="background-image: url(<?php echo INCLUDE_PATH; ?>img/pc.jpg);" class="banner-single sumido"></div>
         <div class="overlay"></div>
         <div class="center">
             <form action="GET">
@@ -62,7 +65,7 @@
             </div>
             <div class="w50 left servicos-container">
                 <h2 class="title">Serviços</h2>
-                <div class="servicos">
+                <div id="servicos">
                     <ul>
                         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptate accusantium in quis, explicabo iure?</li>
                         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptate accusantium in quis, explicabo iure?</li>

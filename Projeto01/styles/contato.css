@@ -28,5 +28,5 @@ section.contato{
     font-size: 20px;
     color: white;
     margin-bottom: 5px;
-
+    cursor: pointer;
 }
