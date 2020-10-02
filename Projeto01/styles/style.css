@@ -251,12 +251,27 @@ section.erro h2{
 section.erro h2 svg{
     margin-right: 10px;
 }
-/*Página de contato*/
-#map{
-    width: 100%;
-    height: 400px;
+/*Controle de sliders*/
+.bullets{
+    position: absolute;
+    z-index: 5;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
-
+.bullets span{
+    /*Para mudar as dimensões*/
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    border-radius: 50%;
+    background-color: rgba(157, 180, 171, 0.7);
+    cursor: pointer;
+}
+span.bolinha-ativa{
+    background-color: white;
+}
 
 @media screen and (max-width: 768px){
     img{
