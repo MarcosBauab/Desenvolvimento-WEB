@@ -77,7 +77,7 @@
     ?>
     <footer <?php if(isset($paginaerro) && $paginaerro == true) echo 'class="fixed"'; ?>>
         <div class="center">
-        <p>&copy; Marcão dos Sites</p>
+        <p>&copy; Marcão Dev</p>
         </div>
     </footer>
     <script src="<?php echo INCLUDE_PATH; ?>js/index.js"></script>
@@ -92,5 +92,6 @@
     <?php 
         } 
     ?>
+    <script src="<?php echo INCLUDE_PATH; ?>js/fadeIn.js"></script>
 </body>
 </html>

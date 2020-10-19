@@ -29,17 +29,17 @@
     <section class="especialidades">
         <div class="center">
             <h2 class="title">Especialidades</h2>
-            <div class="w33 left box-especialidade">
+            <div class="w33 left box-especialidade sumido">
                 <h3><i class="fab fa-css3-alt"></i></h3>
                 <h3>CSS3</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit aperiam incidunt id ullam laudantium et accusamus est harum in. Architecto neque quas, dicta nostrum accusamus ipsum quidem earum fuga aut.</p>
             </div>
-            <div class="w33 left box-especialidade">
+            <div class="w33 left box-especialidade sumido">
                 <h3><i class="fab fa-html5"></i></h3>
                 <h3>HTML5</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit aperiam incidunt id ullam laudantium et accusamus est harum in. Architecto neque quas, dicta nostrum accusamus ipsum quidem earum fuga aut.</p>
             </div>
-            <div class="w33 left box-especialidade">
+            <div class="w33 left box-especialidade sumido">
                 <h3><i class="fab fa-js-square"></i></h3>
                 <h3>Javascript</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit aperiam incidunt id ullam laudantium et accusamus est harum in. Architecto neque quas, dicta nostrum accusamus ipsum quidem earum fuga aut.</p>

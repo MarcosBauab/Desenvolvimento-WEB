@@ -159,6 +159,7 @@ section.especialidades{
     background-color: #BBDB9B;
     color: white;
     padding: 40px 0;
+    min-height: 347px;
 }
 section.especialidades h2.title{
     font-size: 30px;
