@@ -1,6 +1,6 @@
 section.contato{
     text-align: center;
-    margin-top: 20px;
+    padding: 50px;
 }
 .contato input[type=text], input[type=email]{
     width: 100%;
