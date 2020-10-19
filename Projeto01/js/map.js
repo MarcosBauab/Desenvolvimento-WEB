@@ -2,7 +2,7 @@ function initMap(){
 	//Opções do mapa
 	var options = {
 		zoom: 8,
-		center: {lat: -23.241120,lng: -45.916830}
+		center: {lat: -23.241140,lng: -46.916830}
 	}
 	//Criando um objeto novo do mapa
 	var map = new google.maps.Map(document.getElementById('map'), options)
@@ -16,7 +16,7 @@ function initMap(){
 
 	//Janela de informação para aparecer quando clicar:
 	var infoWindow = new google.maps.InfoWindow({
-		content: '<h1>Minha casa</h1>'
+		content: '<h1>Matão</h1>'
 	})
 
 	marcador.addListener('click', function(){
