@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>styles/style.css">
     <?php
         #Pega a url da página
+        #Se existir usa o método : senão usa o 'home'
         $url = isset($_GET['url']) ? $_GET['url'] : 'home' ;
         if($url == 'contato'){
     ?>
@@ -60,7 +61,6 @@
     </header>
     <?php
         
-        #Se existir usa o método : senão usa o 'home'
         
 
         if(file_exists('pages/'.$url.'.php')){
@@ -86,7 +86,7 @@
     <?php
         if($url == 'contato'){
     ?>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4&callback=initMap" type="text/javascript">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php echo API_KEY ?>&callback=initMap" type="text/javascript">
     </script>
     <script src="<?php echo INCLUDE_PATH; ?>js/map.js"></script>
     <?php 
