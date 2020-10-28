@@ -4,7 +4,27 @@
         <div style="background-image: url(<?php echo INCLUDE_PATH; ?>img/pc.jpg);" class="banner-single sumido"></div>
         <div class="overlay"></div>
         <div class="center">
-            <form action="GET">
+
+        <?php
+            if(isset($_POST['acao'])){
+                //Enviou o formulário
+                if($_POST['email'] != ''){
+                    $email = $_POST['email'];
+                    if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+                        //E-mail válido
+                        $enviar = new Email('smtp.gmail.com','jefinhodaruinha@gmail.com',SENHA_EMAIL,'Jefinho');
+                        $enviar->addAdress($email,'Nome');
+                        $enviar->formatarEmail(array('assunto'=>'Deu certo', 'texto'=>$email));
+                        $enviar->enviarEmail();
+                    } else {
+                        echo '<script>alert("Insira um e-mail válido!")</script>';
+                    }
+                } else {
+                    echo '<script>alert("Preencha os campos!")</script>';
+                }
+            }
+        ?>
+            <form method="POST">
                 <h2>Manda seu e-mail aí:</h2>
                 <input type="email" name="email" id="email" required>
                 <input type="submit" value="Cadastrar!" name="acao">
