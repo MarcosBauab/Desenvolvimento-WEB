@@ -34,9 +34,7 @@
                 break;
         }
     
-    ?>
-
-    
+    ?>   
     <header>
         <div class="center">
             <div class="logomarca left">Logomarca</div>
@@ -74,7 +72,35 @@
                 include('pages/home.php');
             }
         }
+        if(isset($_POST['acao']) && $_POST['identificador'] == 'form_contato'){
+            if($_POST['email'] != ''){
+                $email = $_POST['email'];
+                $nome = $_POST['nome'];
+                $mensagem = $_POST['mensagem'];
+                $tel = $_POST['telefone'];
+                $corpo = '';
+                foreach ($_POST as $key => $value) {
+                    $corpo.= ucfirst($key).':'.$value;
+                    $corpo.= '<hr>';
+                }
 
+                if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+                    //E-mail válido
+                    $enviar = new Email('smtp.gmail.com','jefinhodaruinha@gmail.com',SENHA_EMAIL,'Jefinho');
+                    $enviar->addAdress($email,'Nome');
+                    $enviar->formatarEmail(array('assunto'=>$tel, 'texto'=>$corpo));
+                    $enviar->enviarEmail();
+                } else {
+                    echo '<script>alert("Insira um e-mail válido!")</script>';
+                }
+            } else {
+                echo '<script>alert("Preencha os campos!")</script>';
+            }
+            if($enviar->enviarEmail()){
+                echo '<script>alert("Enviado com sucesso!")</script>';
+                
+            }
+        }
     ?>
     <footer <?php if(isset($paginaerro) && $paginaerro == true) echo 'class="fixed"'; ?>>
         <div class="center">

@@ -6,7 +6,7 @@
         <div class="center">
 
         <?php
-            if(isset($_POST['acao'])){
+            if(isset($_POST['acao']) && $_POST['identificador'] == 'form_home'){
                 //Enviou o formulário
                 if($_POST['email'] != ''){
                     $email = $_POST['email'];
@@ -22,11 +22,16 @@
                 } else {
                     echo '<script>alert("Preencha os campos!")</script>';
                 }
+                if($enviar->enviarEmail()){
+                    echo '<script>alert("Enviado com sucesso!")</script>';
+                    
+                }
             }
         ?>
             <form method="POST">
                 <h2>Manda seu e-mail aí:</h2>
                 <input type="email" name="email" id="email" required>
+                <input type="hidden" name="identificador" value="form_home">
                 <input type="submit" value="Cadastrar!" name="acao">
             </form>
         </div>
