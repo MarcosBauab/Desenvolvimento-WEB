@@ -11,7 +11,17 @@ window.onload = function(){
         } 
         
         let box = document.querySelectorAll(".box-especialidade")
-        box[atual].classList.remove("sumido")
+        box[atual].animate([
+            // keyframes
+            { opacity: '0' }, 
+            { opacity: '100%' }
+          ], { 
+            // timing options
+            duration: 1000,
+            iterations: 1,
+            easing: 'cubic-bezier(.59,.12,.35,1.3)',
+            fill: 'forwards'
+          })
 
     }, 1000)
 }

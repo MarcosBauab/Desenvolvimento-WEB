@@ -120,5 +120,6 @@
         } 
     ?>
     <script src="<?php echo INCLUDE_PATH; ?>js/fadeIn.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/carregamento.js"></script>
 </body>
 </html>

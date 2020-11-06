@@ -56,7 +56,7 @@ img{
     z-index: -1;
 }
 .sumido{
-    display: none;
+    opacity: 0;
 }
 /*Header*/
 header{
