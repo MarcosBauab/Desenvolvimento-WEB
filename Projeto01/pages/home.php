@@ -5,29 +5,8 @@
         <div class="overlay"></div>
         <div class="center">
 
-        <?php
-            if(isset($_POST['acao']) && $_POST['identificador'] == 'form_home'){
-                //Enviou o formulário
-                if($_POST['email'] != ''){
-                    $email = $_POST['email'];
-                    if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-                        //E-mail válido
-                        $enviar = new Email('smtp.gmail.com','jefinhodaruinha@gmail.com',SENHA_EMAIL,'Jefinho');
-                        $enviar->addAdress($email,'Nome');
-                        $enviar->formatarEmail(array('assunto'=>'Deu certo', 'texto'=>$email));
-                        $enviar->enviarEmail();
-                    } else {
-                        echo '<script>alert("Insira um e-mail válido!")</script>';
-                    }
-                } else {
-                    echo '<script>alert("Preencha os campos!")</script>';
-                }
-                if($enviar->enviarEmail()){
-                    echo '<script>alert("Enviado com sucesso!")</script>';
-                    
-                }
-            }
-        ?>
+
+            
             <form method="POST">
                 <h2>Manda seu e-mail aí:</h2>
                 <input type="email" name="email" id="email" required>
