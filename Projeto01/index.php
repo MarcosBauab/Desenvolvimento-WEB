@@ -34,7 +34,13 @@
                 break;
         }
     
-    ?>   
+    ?>  
+    <div class="loading">
+        <img src="<?php echo INCLUDE_PATH ?>img/ajax-loader.gif" alt="Carregando">
+    </div>
+    <div class="feito">
+        <img src="<?php echo INCLUDE_PATH ?>img/done.png" alt="Feito">
+    </div> 
     <header>
         <div class="center">
             <div class="logomarca left">Logomarca</div>
@@ -58,6 +64,7 @@
             <div class="clear"></div>
         </div>
     </header>
+    
     <?php
         
         
@@ -74,6 +81,9 @@
         }
         
     ?>
+
+    
+
     <footer <?php if(isset($paginaerro) && $paginaerro == true) echo 'class="fixed"'; ?>>
         <div class="center">
         <p>&copy; Marcão Dev</p>
