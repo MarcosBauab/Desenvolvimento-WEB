@@ -120,7 +120,7 @@ header .logomarca{
 }
 /*Banner-principal*/
 section#banner-principal{
-    height: 600px;
+    height: 500px;
 
     position: relative;
     z-index: 0;
