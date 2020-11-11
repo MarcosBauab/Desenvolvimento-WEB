@@ -1,6 +1,6 @@
     <section id="banner-principal">
         <div style="background-image: url(<?php echo INCLUDE_PATH; ?>img/codigo.jpg);" class="banner-single"></div>
-        <div style="background-image: url(<?php echo INCLUDE_PATH; ?>img/codigo2.jpg);" class="banner-single sumido"></div>
+        <div style="background-image: url(<?php echo INCLUDE_PATH; ?>img/codigo2.jpg);"  class="banner-single sumido"></div>
         <div style="background-image: url(<?php echo INCLUDE_PATH; ?>img/pc.jpg);" class="banner-single sumido"></div>
         <div class="overlay"></div>
         <div class="center">
@@ -25,7 +25,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quo repellendus dicta magnam dignissimos doloremque dolorum. Quod asperiores quisquam consequatur quas nostrum natus id laboriosam doloribus quo, facilis architecto odio?</p>
             </div>
             <div class="w50 left">
-                <img class="right" src="<?php echo INCLUDE_PATH; ?>img/FotoFuvest.png" alt="">
+                <img class="right" src="<?php echo INCLUDE_PATH; ?>img/FotoFuvest.png" loading="lazy" alt="">
             </div>
             <div class="clear"></div>
         </div>
