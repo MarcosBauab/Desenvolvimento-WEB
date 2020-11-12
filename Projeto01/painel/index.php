@@ -1,6 +1,5 @@
 <?php
     include("../config.php");
-
     if(Painel::logado() == false){
         require_once("login.php");
     } else {
