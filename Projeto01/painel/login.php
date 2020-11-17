@@ -25,7 +25,6 @@
                         die();
                     } else{
                         echo '<div class="box-erro-login"><b>Deu ruim na entrada :(</b></div>';
-                        echo '<script>alert("Usuário ou senha negados!")</script>';
                     }
                 }
             ?>

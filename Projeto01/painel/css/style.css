@@ -59,25 +59,18 @@ body,html{
     border-radius: 8px;
     border: 2px solid rgb(100, 0, 0);
     box-shadow: 2px 2px 1px 1px black;
-    animation: andar 5s ease-in-out;
+    animation: andar 2s cubic-bezier(1,.01,.73,.64);
     animation-iteration-count: 1;
     animation-fill-mode: forwards ;
 }
 @keyframes andar{
     0%{
-        transform: translateX(110%);
+        opacity: 0;
     }
-    50%{
-        transform: translateX(-10%);
-    }
-    60%{
-        transform: translateX(0);
-    }
-    70%{
-        transform: translateX(0);
+    20%{
+        opacity: 1;
     }
     100%{
-        transform: translateX(110%);
+        opacity: 0;
     }
 }
-/*Painel de controle*/
