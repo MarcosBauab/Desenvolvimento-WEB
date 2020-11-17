@@ -87,7 +87,8 @@ img{
     animation-fill-mode: forwards;
 }
 .sumido{
-    opacity: 0;
+    animation: fadeOut .5s forwards;
+    animation-iteration-count: 1;
 }
 /*Header*/
 header{
@@ -383,5 +384,13 @@ span.bolinha-ativa{
     }
     100%{
         transform:rotate(360deg); 
+    }
+}
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
     }
 }
