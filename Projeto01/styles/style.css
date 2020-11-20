@@ -1,12 +1,9 @@
-@font-face{
-    font-family: "Bebas";
-    src: url("../fonts/BebasNeue-Regular.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Bebas";
+    font-family: 'Roboto', sans-serif;
 
     --cor-background:  #878E76;
     --azul-daora: rgba(157, 180, 171, 0.7);
@@ -88,6 +85,10 @@ img{
 }
 .sumido{
     animation: fadeOut .5s forwards;
+    animation-iteration-count: 1;
+}
+.fadeIn{
+    animation: fadeIn .5s forwards;
     animation-iteration-count: 1;
 }
 /*Header*/
@@ -392,5 +393,13 @@ span.bolinha-ativa{
     }
     100%{
         opacity: 0;
+    }
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }

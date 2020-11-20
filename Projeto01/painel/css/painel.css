@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 body,html{
     height: 100%;
@@ -10,28 +12,128 @@ body,html{
 /*Auxiliares*/
 .centralizar{
     margin: 0 auto;
-    padding: 0 2%;
+    padding: 0 1%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.clear{
+    clear: both;
 }
 /*Header*/
 header{
     background-color: #A6B1E1;
     width: 80%;
-    padding: 10px;
-    position: absolute;
-    right: 0;
-    top: 0;
+    padding: 10px 10px 10px 3px;
+    position: relative;
+    left: 20%;
 }
 .logout a{
     color: white;
     font-size: 20px;
 }
 /*Aside*/
+.wrapper{
+    width: 100%;
+}
 aside{
+    overflow-x: hidden;
     overflow-y: auto;
+    padding: 10px;
     width: 20%;
     height: 100%;
     background-color:#4E4C67;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+div.box-usuario{
+    text-align: center;
+}
+div.box-usuario .avatar-user{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #2e2d3d;
+    padding: 15px;
+}
+div.box-usuario .imagem-user{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #2e2d3d;   
+}
+div.box-usuario .imagem-user img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+div.box-usuario .avatar-user svg{
+    color:#2e2d3d;
+    font-size: 40px;
+}
+
+.nome-usuario{
+    margin-top: 5px;
+    text-align: center;
+}
+.nome-usuario p{
+    font-size: 20px;
+    color: white;
+}
+/*Menu de cima*/
+.menu-btn{
+    display: flex;
+    gap: 10px;
+}
+.menu-btn svg{
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+.menu-btn svg:hover, .logout a svg:hover{
+    transform: scale(1.2);
+}
+.svg-inline--fa{
+    height: auto;
+}
+/*Conteúdo principal*/
+section.content{
+    width: 80%;
+    position: relative;
+    left: 20%;
+    padding: 10px;
+}
+section.content .box-conteudo{
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+.w100{
+    width: 100%;
+}
+.w50{
+    width: 49%;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+@media (max-width: 768px){
+    aside{
+        width: 0;
+        padding: 0;
+    }
+    header{
+        width: 100%;
+        left: 0;
+    }
+    section.content{
+        width: 100%;
+        left: 0;
+    }
 }

@@ -18,9 +18,12 @@
                     $sql->execute(array($user, $password));
                     //Checar se o login está certo, login e senha corretos
                     if($sql->rowCount() == 1){
+                        $info = $sql->fetch();
                         $_SESSION['login'] = true;
                         $_SESSION['user'] = ucfirst($user);
                         $_SESSION['password'] = $password;
+                        $_SESSION['cargo'] = $info['cargo'];
+                        $_SESSION['img'] = $info['img'];
                         header('Location: '.INCLUDE_PATH_PAINEL);
                         die();
                     } else{

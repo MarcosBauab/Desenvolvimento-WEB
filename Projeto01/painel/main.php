@@ -17,19 +17,50 @@
     </head>
     <body>
         <aside>
-            
+            <div class="wrapper">
+                <div class="box-usuario">
+                    <?php if($_SESSION['img'] == ''){ ?>
+                        <div class="avatar-user">
+                            <i class="fa fa-user"></i>
+                        </div>
+                    <?php } else {?>
+                        <div class="imagem-user">
+                            <img src="<?php echo INCLUDE_PATH_PAINEL ?>uploads/<?php echo $_SESSION['img']; ?>" alt="">
+                        </div>
+                    <?php } ?>    
+                    <div class="nome-usuario">
+                        <p><?php echo $_SESSION['user'] ?></p>
+                        <p><?php echo pegaCargo($_SESSION['cargo']); ?></p>
+                    </div>
+                </div>
+            </div>
         </aside>
         <header>
             <div class="centralizar">
-                <h1>Bem-vindo <?php echo $_SESSION['user'] ?></h1>
+                <div class="menu-btn">
+                    <i class="fa fa-bars"></i>                    
+                </div>
                 <div class="logout">
                     <a href="<?php echo INCLUDE_PATH_PAINEL ?>?logout"><i class="fas fa-sign-out-alt"></i></a>
                 </div>
             </div>
         </header>
+        <section class="content">
+            <div class="box-conteudo w100">
+
+            </div>
+            <div class="box-conteudo w50 left">
+                
+            </div>
+            <div class="box-conteudo w50 right">
+                
+            </div>
+            <div class="clear"></div>
+        </section>
+        <script src="<?php echo INCLUDE_PATH_PAINEL?>js/main.js"></script>
+        <script src="<?php echo INCLUDE_PATH?>js/all.min.js"></script>
     </body>
     </html>
-    <script src="<?php echo INCLUDE_PATH?>js/all.min.js"></script>
 <?php
     } else {
         header('Location: login');

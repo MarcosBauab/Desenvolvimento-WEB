@@ -31,8 +31,10 @@ function slider(){
             slideAtual++
             slide.forEach(function(entry){
                 entry.classList.add("sumido")
+                entry.classList.remove("fadeIn")
             })
             slide[slideAtual].classList.remove("sumido")
+            slide[slideAtual].classList.add("fadeIn")
         } else {
             spans.forEach(function(entry){
                 entry.classList.remove("bolinha-ativa")
@@ -40,8 +42,10 @@ function slider(){
             slideAtual = 0
             slide.forEach(function(entry){
                 entry.classList.add("sumido")
+                entry.classList.remove("fadeIn")
             })
             slide[slideAtual].classList.remove("sumido")
+            slide[slideAtual].classList.add("fadeIn")
         }
     }
     spans.forEach(function(entry){
@@ -58,8 +62,10 @@ function slider(){
                     slideAtual = id
                     slide.forEach(function(entry){
                         entry.classList.add("sumido")
+                        entry.classList.remove("fadeIn")
                     })
                     slide[slideAtual].classList.remove("sumido")
+                    slide[slideAtual].classList.add("fadeIn")
                 }
             })
         })
