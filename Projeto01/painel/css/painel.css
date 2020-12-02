@@ -124,6 +124,20 @@ section.content .box-conteudo{
 .right{
     float: right;
 }
+/*Tabela*/
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+th, td{
+    border:1px solid #dddddd;
+    padding:10px;
+    text-align: left;
+}
 @media (max-width: 768px){
     aside{
         width: 0;

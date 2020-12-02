@@ -36,7 +36,7 @@
                 </div>
                 <div class="itens-menu">
                     <h2>Cadastro</h2>
-                    <a href="">Depoimentos</a>
+                    <a href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-depoimento">Depoimentos</a>
                     <a href="">Serviços</a>
                     <a href="">Slides</a>
                     <h2>Gestão</h2>
@@ -57,37 +57,13 @@
                     <i class="fa fa-bars"></i>                    
                 </div>
                 <div class="logout">
+                    <a href="<?php echo INCLUDE_PATH_PAINEL ?>" style="padding-right:20px;"><i class="fas fa-home"></i></a>
                     <a href="<?php echo INCLUDE_PATH_PAINEL ?>?logout"><i class="fas fa-sign-out-alt"></i></a>
                 </div>
             </div>
         </header>
         <section class="content">
-            <div class="box-conteudo w100">
-                <h2><i class="fa fa-home"></i>Painel de controle</h2>
-                
-                <div class="container-metricas">
-                    <div class="box-metrica">
-                        <h2>Usuários online</h2>
-                        <p>10</p>
-                    </div>
-                    <div class="box-metrica">
-                        <h2>Visitas mensais</h2>
-                        <p>100</p>
-                    </div>
-                    <div class="box-metrica">
-                        <h2>Visitas Hoje</h2>
-                        <p>10</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="box-conteudo w50 left">
-                
-            </div>
-            <div class="box-conteudo w50 right">
-                
-            </div>
-            <div class="clear"></div>
+            <?php echo Painel::carregarPagina(); ?>
         </section>
         <script src="<?php echo INCLUDE_PATH_PAINEL?>js/main.js"></script>
         <script src="<?php echo INCLUDE_PATH?>js/all.min.js"></script>
