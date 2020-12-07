@@ -94,8 +94,9 @@ div.box-usuario .avatar-user svg{
     cursor: pointer;
     color: white;
 }
-.menu-btn svg:hover, .logout a svg:hover{
+.menu-btn svg:hover, .logout a svg:hover, a:hover{
     transform: scale(1.2);
+    transform-origin: left;
 }
 .svg-inline--fa{
     height: auto;

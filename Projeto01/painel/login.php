@@ -20,6 +20,7 @@
                     if($sql->rowCount() == 1){
                         $info = $sql->fetch();
                         $_SESSION['login'] = true;
+                        $_SESSION['nome'] = $info['nome'];
                         $_SESSION['user'] = ucfirst($user);
                         $_SESSION['password'] = $password;
                         $_SESSION['cargo'] = $info['cargo'];

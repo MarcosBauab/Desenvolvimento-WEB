@@ -1,5 +1,7 @@
 <?php include('config.php');  ?>
-<?php Site::updateOnline(); ?>
+<?php Site::updateOnline(); 
+      Site::contador();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

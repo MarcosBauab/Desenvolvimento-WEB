@@ -30,7 +30,7 @@
                         </div>
                     <?php } ?>    
                     <div class="nome-usuario">
-                        <p><?php echo $_SESSION['user'] ?></p>
+                        <p><?php echo $_SESSION['nome'] ?></p>
                         <p><?php echo pegaCargo($_SESSION['cargo']); ?></p>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                     <a href="">Listar Serviços</a>
                     <a href="">Listar Slides</a>
                     <h2>Administração do Painel</h2>
-                    <a href="">Editar usuário</a>
+                    <a href="<?php echo INCLUDE_PATH_PAINEL ?>editar-usuario">Editar usuário</a>
                     <a href="">Adicionar usuários</a>
                     <h2>Configurações</h2>
                     <a href="">Editar</a>
