@@ -1,8 +1,9 @@
 <?php
     $users = Painel::listarUsersOnline();
 
-    $visitasSemanais = Database::conectar()->prepare("SELECT * FROM `tb_admin.visitas`");
-    $visitasSemanais->execute();
+    $visitasSemanais = Database::conectar()->prepare("SELECT * FROM `tb_admin.visitas` WHERE dia BETWEEN ? AND ?");
+    $hoje = date('Y-m-d');
+    $visitasSemanais->execute(array(date('Ymd', strtotime($hoje. ' - 7 days')),date('Ymd') ));
     $visitasSemanais = $visitasSemanais->rowCount();
 
     $visitasHoje = Database::conectar()->prepare("SELECT * FROM `tb_admin.visitas` WHERE dia = ?");

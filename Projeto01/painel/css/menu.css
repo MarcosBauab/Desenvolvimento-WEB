@@ -59,6 +59,15 @@ div.box-metrica:nth-of-type(3){
 section.content div.box-conteudo div.container-metricas div.box-metrica h2{
     font-weight: normal;
 }
+/*Menu ativo*/
+div.itens-menu a[ativo]{
+    background-color: #3a385a;
+}
+div.itens-menu a[ativo]::before{
+    content: '➡️ ';
+}
+
+
 @media (max-width: 768px){
     section.content div.box-conteudo div.container-metricas{
         flex-direction: column;

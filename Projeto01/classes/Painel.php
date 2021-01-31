@@ -43,7 +43,7 @@
       }
 
       public static function uploadFile($file){
-        if(move_uploaded_file($file['tmp_name'],BASE_DIR_PAINEL."/uploads/".$file['name']))
+        if(move_uploaded_file($file['tmp_name'],BASE_DIR_PAINEL."/ups/".$file['name']))
           return $file['name'];
         else
           return false;
@@ -51,17 +51,18 @@
       public static function imagemValida($img){
         if($img['type'] == 'image/png' || $img['type'] == 'image/jpg' || $img['type'] == 'image/jpeg'){
           $tamanho = intval($img['size']/1024);
-          if ($tamanho < 300)
-            return true;
-          else
-            return false;
+          return $tamanho < 300;
         } else {
           return false;
         }
       }
       public static function deleteFile($file){
-        //chmod (BASE_DIR_PAINEL, 0777);
-        unlink("uploads/".$file);  
+        unlink("ups/".$file);
+        /*if(move_uploaded_file($file,BASE_DIR_PAINEL.'/uploads/')){
+          echo 'foi';
+        }else {
+          echo 'erro';
+        }*/
       }
 
     }

@@ -1,6 +1,9 @@
+<?php
+    verificaPermissaoPagina(2);
+?>
 <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAINEL ?>css/editarUser.css">
 <div class="box-conteudo w100">
-    <h2><i class="fas fa-user-edit"></i> Editar Usuário</h2>
+    <h2><i class="fas fa-user-edit"></i> Adicionar Usuário</h2>
 
     <?php
         if(isset($_POST['acao'])){
@@ -39,17 +42,21 @@
                         <!-- tipo para poder imagens -->
     <form method="POST" enctype="multipart/form-data">
         <div class="divisoria">
+            <label for="login">Login: </label>
+            <input type="text" name="login" id="login" required>
+        </div>
+        <div class="divisoria">
             <label for="nome">Nome: </label>
-            <input type="text" name="nome" id="nome" value="<?php echo $_SESSION['nome']; ?>" required>
+            <input type="text" name="nome" id="nome" required>
         </div>
         <div class="divisoria">
             <label for="password">Senha: </label>
-            <input type="password" name="password" id="password" value="<?php echo $_SESSION['password'] ?>" required>
+            <input type="password" name="password" id="password" required>
         </div>
         <div class="divisoria">
             <label for="imagem">Imagem: </label>
             <input type="file" name="imagem" id="imagem"> 
-            <input type="hidden" name="imagem_atual" value="<?php  echo $_SESSION['img']  ?> ">
+            <input type="hidden" name="imagem_atual">
         </div>
         <input type="submit" name="acao" value="Atualizar" required>
     </form>
