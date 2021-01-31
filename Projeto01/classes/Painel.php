@@ -1,6 +1,12 @@
 <?php
     class Painel
     {
+      public static $cargos = [
+          '0' => 'Usuário',
+          '1' => 'SubAdministrador',
+          '2' => 'Administrador'
+      ];
+
       public static function logado(){
         return isset($_SESSION['login']) ? true : false;
       }  
