@@ -1,3 +1,6 @@
+<?php Site::updateOnline(); 
+      Site::contador();
+?>
     <section id="banner-principal">
         <div style="background-image: url(<?php echo INCLUDE_PATH; ?>img/codigo.jpg);" class="banner-single"></div>
         <div style="background-image: url(<?php echo INCLUDE_PATH; ?>img/codigo2.jpg);"  class="banner-single sumido"></div>

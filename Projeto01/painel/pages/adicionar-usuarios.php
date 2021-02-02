@@ -33,6 +33,9 @@
                 } else {
                     #Podemos cadastrar
                     $classeUsuario = new Usuario();
+                    $img = Painel::uploadFile($img);
+                    $_SESSION['img'] = $img;
+                    $classeUsuario->cadastrarUsuario($nome,$login,$senha,$cargo,$img);
                     Painel::alert('sucesso', 'Cadastro do usuário com nome "'.$login.'" concluído!');
                 }
             }

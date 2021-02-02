@@ -57,8 +57,8 @@
                     <i class="fa fa-bars"></i>                    
                 </div>
                 <div class="logout">
-                    <a href="<?php echo INCLUDE_PATH_PAINEL ?>" style="padding-right:20px;"><i class="fas fa-home"></i></a>
-                    <a href="<?php echo INCLUDE_PATH_PAINEL ?>?logout"><i class="fas fa-sign-out-alt"></i></a>
+                    <a href="<?php echo INCLUDE_PATH_PAINEL ?>" style="padding:10px 15px;<?php if(@$_GET['url'] == ''){?>background-color:#737a99; <?php } ?>"><i class="fas fa-home"></i></a>
+                    <a href="<?php echo INCLUDE_PATH_PAINEL ?>?logout" style="padding:10px 15px;"><i class="fas fa-sign-out-alt"></i></a>
                 </div>
             </div>
         </header>

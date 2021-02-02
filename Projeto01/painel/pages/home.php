@@ -29,7 +29,7 @@
     </div>
 
 </div>
-<div class="box-conteudo w100">
+<div class="box-conteudo w50 left">
     <h2><i class="fa fa-rocket"></i> Usuários online</h2>
     <div style="overflow-x: auto;">
         <table>
@@ -48,6 +48,31 @@
         </table>
     </div>
 </div>
+
+<div class="box-conteudo w50 right">
+    <h2><i class="fa fa-user"></i> Usuários do Painel</h2>
+    <div style="overflow-x: auto;">
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Cargo</th>
+            </tr>
+            <?php 
+                $userPainel = Database::conectar()->prepare("SELECT * FROM `tb_admin.usuarios`");
+                $userPainel->execute();
+                $userPainel = $userPainel->fetchAll();
+                foreach ($userPainel as $key => $value) {
+
+            ?>
+            <tr>
+                <td><?php echo $value['user'] ?></td>
+                <td><?php echo pegaCargo($value['cargo']); ?></td>
+            </tr>
+            <?php } ?>
+        </table>
+    </div>
+</div>
+<div class="clear"></div>
 
 <div class="box-conteudo w50 left">
     

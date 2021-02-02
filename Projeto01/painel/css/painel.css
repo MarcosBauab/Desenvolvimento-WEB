@@ -157,6 +157,9 @@ div.erro{
     color: whitesmoke;
 }
 @media (max-width: 768px){
+    .w50{
+        width: 100%;
+    }
     aside{
         width: 0;
         padding: 0;

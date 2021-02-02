@@ -35,7 +35,14 @@
                 setcookie('visita','true', time() + (60*60*24*7));
                 $sql = Database::conectar()->prepare("INSERT INTO `tb_admin.visitas` VALUES(null,?,?)");
                 $sql->execute(array($_SERVER['REMOTE_ADDR'], date('Y-m-d')));
-            }   
+            } else {
+                $sql = Database::conectar()->prepare("SELECT `id` FROM `tb_admin.visitas` WHERE ip = ? AND dia = ?");
+                $sql->execute(array($_SERVER['REMOTE_ADDR'], date('Y-m-d')));
+                if($sql->rowCount() < 1){
+                    $sql = Database::conectar()->prepare("INSERT INTO `tb_admin.visitas` VALUES(null,?,?)");
+                    $sql->execute(array($_SERVER['REMOTE_ADDR'], date('Y-m-d')));
+                }
+            }
         }
 
     }
