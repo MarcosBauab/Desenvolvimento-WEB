@@ -1,3 +1,23 @@
+<?php
+    if(isset($_COOKIE['lembrar'])){
+        $user = $_COOKIE['user'];
+        $password = $_COOKIE['password'];
+        $sql = Database::conectar()->prepare("SELECT * FROM `tb_admin.usuarios` WHERE user = ? AND senha = ?");
+        $sql->execute(array($user, $password));
+        //Checar se o login está certo, login e senha corretos
+        if($sql->rowCount() == 1){
+            $info = $sql->fetch();
+            $_SESSION['login'] = true;
+            $_SESSION['nome'] = $info['nome'];
+            $_SESSION['user'] = ucfirst($user);
+            $_SESSION['password'] = $password;
+            $_SESSION['cargo'] = $info['cargo'];
+            $_SESSION['img'] = $info['img'];
+            header('Location: '.INCLUDE_PATH_PAINEL);
+            die();
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,6 +45,11 @@
                         $_SESSION['password'] = $password;
                         $_SESSION['cargo'] = $info['cargo'];
                         $_SESSION['img'] = $info['img'];
+                        if(isset($_POST['lembrar'])){
+                            setcookie('lembrar',true,time()+(60*60),'/');
+                            setcookie('user',$user,time()+(60*60),'/');
+                            setcookie('password',$password,time()+(60*60),'/');
+                        }
                         header('Location: '.INCLUDE_PATH_PAINEL);
                         die();
                     } else{
@@ -36,7 +61,12 @@
             <form method="POST">
                 <input type="text" name="user" id="user" placeholder="Login..." required>
                 <input type="password" name="passw" id="passw" placeholder="Senha..." required>
+                <div class="lembrar">
+                    <input type="checkbox" name="lembrar" id="lembrar">
+                    <label for="lembrar">Lembrar-me</label>
+                </div>
                 <input type="submit" name="entrar" value="Entrar" required>
+                <div class="clear"></div>
             </form>
         </div>
     </div>

@@ -94,7 +94,7 @@ img{
 /*Header*/
 header{
     padding: 20px 0;
-    background: #BBDB9B;
+    background: #46c1f2c2;
 }
 .mobile{
     display: none;
@@ -138,7 +138,7 @@ section#banner-principal form{
     text-align: center;
 }
 section#banner-principal form h2{
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.877);
     font-size: 30px;
 
 }
@@ -157,11 +157,12 @@ section#banner-principal form input[type="submit"]{
     font-size: 30px;
     outline: none;
     margin: 10px 0;
-    background-color: #ABC4A1;
+    background-color: #4A8CDC;
     height: 50px;
     border-radius: 10px;
     border: 0;
     cursor: pointer;
+    color: rgba(255, 255, 255, 0.877);
 } 
 section#banner-principal .banner-single{
     position: absolute;
@@ -189,7 +190,7 @@ section#autor img{
 }
 /*Section especialidades*/
 section.especialidades{
-    background-color: #BBDB9B;
+    background-color: #4A8CDC;
     color: white;
     padding: 40px 0;
     min-height: 347px;
@@ -222,7 +223,7 @@ div.box-especialidade h3:nth-of-type(2){
 /*Section extras*/
 section.extras{
     padding: 30px 0;
-    background-color: var(--azul-daora);
+    background-color: #46C1F2;
 }
 section.extras div:nth-child(1), .servicos-container{
     padding: 0 30px;
@@ -257,7 +258,7 @@ p.autor{
 /*Footer*/
 footer{
     padding: 20px 0;
-    background-color: #BBDB9B;
+    background-color: #43E4E8;
 }
 footer p{
     text-align: center;
