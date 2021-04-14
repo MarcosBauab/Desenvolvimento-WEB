@@ -73,6 +73,30 @@
           echo 'erro';
         }*/
       }
+      public static function insert($arr){
+        $funcionou = true;
+        $nome_tabela = $arr['nome_tabela'];
+        $query = "INSERT INTO `$nome_tabela` VALUES(null";
+        foreach ($arr as $key => $value) {
+          if($key == 'acao' || $key == 'nome_tabela'){
+            continue;
+          }
+          if($value == ''){
+            $funcionou = false;
+            break;
+          }
+
+          $query.=",?";  
+          $parametros[] = $value;
+        }
+        $query.=")";
+        if($funcionou){
+          $sql = Database::conectar()->prepare($query);
+          $sql->execute($parametros);
+        }
+
+        return $funcionou;
+      }
 
     }
     
